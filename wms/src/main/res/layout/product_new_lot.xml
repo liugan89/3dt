@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/v1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lot_number"
+        android:gravity="end"
+        android:text="批次号：" />
+
+    <EditText
+        android:id="@+id/lot_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/v1" />
+
+
+    <TextView
+        android:id="@+id/v2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lot_time"
+        android:gravity="end"
+        android:text="过期时间：" />
+
+    <EditText
+        android:id="@+id/lot_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lot_number"
+        android:layout_toRightOf="@id/v2"
+        android:editable="false"
+        android:clickable="true"/>
+
+
+    <TextView
+        android:id="@+id/v3"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lot_quantity"
+        android:gravity="end"
+        android:text="批次数量：" />
+
+    <EditText
+        android:id="@+id/lot_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lot_time"
+        android:layout_toRightOf="@id/v3"
+        android:hint="选填项" />
+
+    <Button
+        android:id="@+id/new_lot_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lot_quantity"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:text="确定" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="base_back">#4472C4</color>
+    <color name="login_stroke">#2B4F8E</color>
+    <color name="login_back_deep">#94AAE9</color>
+    <color name="login_back_light">#DFE5F7</color>
+    <color name="login_title">#032565</color>
+    <color name="shadow">#999999</color>
+    <color name="login_button_deep">#62A336</color>
+    <color name="login_button_light">#7FB75D</color>
+    <color name="login_button_deep_pressed">#519225</color>
+    <color name="login_button_light_pressed">#6EA64C</color>
+
+    <color name="navigation_green">#92D050</color>
+    <color name="navigation_green2">#00B050</color>
+    <color name="navigation_yellow">#FFC000</color>
+    <color name="navigation_blue">#4472C4</color>
+    <color name="sort_pink">#F8CBAD</color>
+    <color name="sort_skyblue">#DAE3F3</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#030303</color>
+</resources>

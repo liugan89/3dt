@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddLotActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <include layout="@layout/bottom_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:layout_below="@id/rl_title"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/v1"
+                    android:src="@mipmap/star"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/v1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="装运单：" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="4"
+                android:background="@drawable/grey_border">
+
+                <TextView
+                    android:id="@+id/tv_relate_shipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/iv_lot_scan"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/iv_lot_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/scan02"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/v3"
+                    android:src="@mipmap/star"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/v3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="通知单号：" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="4"
+                android:background="@drawable/grey_border">
+
+                <com.takumi.wms.widget.DropEdit
+                    android:id="@+id/et_relate_notice"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/product_lot_time"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:imeOptions="actionSearch"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/iv_notice_list"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/next" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/v2"
+                    android:src="@mipmap/star"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/v2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="合同号：" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_contract"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="4"
+                android:clickable="true"
+                android:background="@drawable/grey_border">
+
+                <TextView
+                    android:id="@+id/tv_relate_contract"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/product_lot_time"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:imeOptions="actionSearch"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/iv_contract_list"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/next" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="车牌号：" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="4"
+                android:clickable="true"
+                android:background="@drawable/grey_border">
+
+                <TextView
+                    android:id="@+id/tv_relate_license"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/product_lot_time"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:imeOptions="actionSearch"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="司机姓名：" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="4"
+                android:clickable="true"
+                android:background="@drawable/grey_border">
+
+                <TextView
+                    android:id="@+id/tv_relate_name"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/product_lot_time"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:imeOptions="actionSearch"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="司机电话：" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="4"
+                android:clickable="true"
+                android:background="@drawable/grey_border">
+
+                <TextView
+                    android:id="@+id/tv_relate_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/product_lot_time"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:imeOptions="actionSearch"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_relate_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/blue_radius_back"
+            android:text="保存"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

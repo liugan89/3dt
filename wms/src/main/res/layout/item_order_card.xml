@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_order_label"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/blue_back"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="产品  12345"
+        android:textColor="@color/white" />
+
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/tv_order_label"
+        android:background="@drawable/label" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv1"
+        android:background="@drawable/white_radius_back"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:paddingTop="40dp">
+
+        <LinearLayout
+            android:id="@+id/ll_order_contract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="3"
+                android:gravity="end"
+                android:text="合同号："
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/tv_order_contract"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_order_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="3"
+                android:gravity="end"
+                android:text="数量："
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/tv_order_count"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_order_acceptedCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="3"
+                android:gravity="end"
+                android:text="计划数量："
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/tv_order_acceptedCount"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
